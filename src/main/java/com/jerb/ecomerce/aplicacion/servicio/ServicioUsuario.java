@@ -1,8 +1,8 @@
 package com.jerb.ecomerce.aplicacion.servicio;
 
 import com.jerb.ecomerce.aplicacion.puertos.entrada.UsuarioPuertoServicio;
-import com.jerb.ecomerce.domino.Administrador;
-import com.jerb.ecomerce.domino.Cliente;
+import com.jerb.ecomerce.dominio.Administrador;
+import com.jerb.ecomerce.dominio.Cliente;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -1,4 +1,4 @@
-package com.jerb.ecomerce.domino;
+package com.jerb.ecomerce.dominio;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

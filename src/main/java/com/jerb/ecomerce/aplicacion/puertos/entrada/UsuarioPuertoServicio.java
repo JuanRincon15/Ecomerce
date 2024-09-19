@@ -1,8 +1,7 @@
 package com.jerb.ecomerce.aplicacion.puertos.entrada;
 
-import com.jerb.ecomerce.domino.Administrador;
-import com.jerb.ecomerce.domino.Cliente;
-import com.jerb.ecomerce.domino.Usuario;
+import com.jerb.ecomerce.dominio.Administrador;
+import com.jerb.ecomerce.dominio.Cliente;
 
 public interface UsuarioPuertoServicio {
     Boolean login(String correo, String clave);
