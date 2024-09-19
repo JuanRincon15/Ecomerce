@@ -12,5 +12,7 @@ import java.time.LocalDateTime;
 public class Evento {
     private LocalDateTime fechaInicio;
     private LocalDateTime fechaFin;
+    private String nombre;
     private Float porcentajeDescuento;
+    private Boolean aleatorio;
 }
