@@ -16,8 +16,9 @@ public class ServicioProducto implements ProductoPuertoServicio {
     }
 
     @Override
-    public Producto crearProducto(Producto producto) {
-        return puertopersistencia.crearProductobd(producto);
+    public Producto crearProducto(Producto producto,int cantidad) {
+        producto.setIdProducto("PRT"+producto.generarcadena(10));
+        return puertopersistencia.crearProductobd(producto,cantidad);
     }
 
     @Override

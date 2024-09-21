@@ -5,7 +5,7 @@ import com.jerb.ecomerce.domain.Producto;
 import java.util.ArrayList;
 
 public interface ProductoPuertoServicio {
-    Producto crearProducto(Producto producto);
+    Producto crearProducto(Producto producto,int cantidad);
     Producto productoPorId(String idProducto);
     ArrayList<Producto> productosPorNombre(String nombre);
     ArrayList<Producto> productosPorPrecio(String criterio, Double precio);

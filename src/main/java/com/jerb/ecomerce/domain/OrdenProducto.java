@@ -10,4 +10,5 @@ import lombok.NoArgsConstructor;
 public class OrdenProducto {
     private String idOrden;
     private String idProducto;
+    private int cantProducto;
 }
