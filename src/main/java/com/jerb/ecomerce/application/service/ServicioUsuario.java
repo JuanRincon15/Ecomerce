@@ -4,6 +4,7 @@ import com.jerb.ecomerce.application.ports.input.UsuarioPuertoServicio;
 import com.jerb.ecomerce.application.ports.output.UsuarioPuertoPersistencia;
 import com.jerb.ecomerce.domain.Administrador;
 import com.jerb.ecomerce.domain.Cliente;
+import com.jerb.ecomerce.domain.Usuario;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -18,18 +19,19 @@ public class ServicioUsuario implements UsuarioPuertoServicio {
     }
 
     @Override
-    public Boolean login(String correo, String clave) {
-        return puertopersistencia.validarCredencialesUsuario(correo,clave);
+    public Boolean login(Usuario usuario) {
+        return puertopersistencia.validarCredencialesUsuario(usuario);
     }
 
     @Override
     public Administrador CrearAdministrador(Administrador admin) {
+        admin.setIdAdministrador("ADM"+admin.generarcadena(6));
         return puertopersistencia.crearAdminbd( admin);
     }
 
     @Override
     public Cliente CrearCliente(Cliente cliente) {
-        System.out.println("servicio: "+cliente.toString());
+        cliente.setIdCliente("CLN"+cliente.generarcadena(6));
         return puertopersistencia.crearClientebd(cliente);
     }
 

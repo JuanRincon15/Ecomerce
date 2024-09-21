@@ -9,7 +9,7 @@ import java.util.ArrayList;
 @Component
 public class AdaptadorProductoPersistencia implements ProductoPuertoPersistencia {
     @Override
-    public Producto crearProductobd(String nombre, String categoria, Double valor) {
+    public Producto crearProductobd(Producto producto) {
         return null;
     }
 

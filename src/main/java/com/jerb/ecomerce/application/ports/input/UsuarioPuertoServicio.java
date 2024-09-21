@@ -2,11 +2,12 @@ package com.jerb.ecomerce.application.ports.input;
 
 import com.jerb.ecomerce.domain.Administrador;
 import com.jerb.ecomerce.domain.Cliente;
+import com.jerb.ecomerce.domain.Usuario;
 
 import java.util.ArrayList;
 
 public interface UsuarioPuertoServicio {
-    Boolean login(String correo, String clave);
+    Boolean login(Usuario usuario);
     Administrador CrearAdministrador(Administrador admin);
     Cliente CrearCliente(Cliente cliente);
     Cliente ClientePorId(String idCliente);
