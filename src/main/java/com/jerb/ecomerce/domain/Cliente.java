@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Data
 @NoArgsConstructor
@@ -14,5 +15,5 @@ public class Cliente extends Usuario{
     private String nombre;
     private String direccion;
     private String telefono;
-    private ArrayList<Orden> ordenes;
+    private List<Orden> ordenes;
 }

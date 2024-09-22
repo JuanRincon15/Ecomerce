@@ -1,16 +1,13 @@
-package com.jerb.ecomerce.domain;
+package com.jerb.ecomerce.infrastructure.adapters.input.rest.model.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Random;
-
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class OrdenProducto {
+public class OrdenRespuesta {
     private String idOrden;
-    private String idProducto;
-    private int cantProducto;
+    private Double valorOrden;
 }

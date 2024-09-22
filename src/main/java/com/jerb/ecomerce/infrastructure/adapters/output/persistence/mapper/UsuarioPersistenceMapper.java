@@ -24,6 +24,7 @@ public interface UsuarioPersistenceMapper {
 
     Administrador usuarioAdministrador(EntidadUsuario usuario);
 
+    @Mapping(source = "correo", target = "correo")
     Cliente usuarioACliente(EntidadUsuario usuario);
 
     List<Cliente> listaClientes(List<EntidadUsuario> usuarios);

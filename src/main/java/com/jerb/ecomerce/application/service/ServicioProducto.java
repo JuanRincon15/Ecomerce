@@ -6,6 +6,8 @@ import com.jerb.ecomerce.domain.Producto;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
+
 @Service
 public class ServicioProducto implements ProductoPuertoServicio {
 
@@ -42,7 +44,7 @@ public class ServicioProducto implements ProductoPuertoServicio {
     }
 
     @Override
-    public ArrayList<Producto> retornarProductos() {
+    public List<Producto> retornarProductos() {
         return puertopersistencia.consultarProductos();
     }
 

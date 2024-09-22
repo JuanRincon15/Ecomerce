@@ -21,6 +21,7 @@ public interface UsuarioRestMapper {
     @Mapping(source = "correo", target = "correo")
     @Mapping(source = "clave", target = "clave")
     Cliente toCliente(ClienteCreacionSolicitud request);
+    @Mapping(source = "correo", target = "correo")
     ClienteRespuesta toClienteRespuesta(Cliente cliente);
     @Mapping(source = "correo", target = "correo")
     Usuario loginToUsuario(loginSolicitud request);

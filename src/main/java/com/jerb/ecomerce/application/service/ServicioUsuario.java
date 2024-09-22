@@ -31,6 +31,7 @@ public class ServicioUsuario implements UsuarioPuertoServicio {
 
     @Override
     public Cliente CrearCliente(Cliente cliente) {
+        System.out.println("mapeo cliente: "+cliente.toString());
         cliente.setIdCliente("CLN"+cliente.generarcadena(6));
         return puertopersistencia.crearClientebd(cliente);
     }

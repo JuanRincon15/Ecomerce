@@ -16,6 +16,7 @@ public class EntidadProducto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(name = "id_producto",unique = true)
     private String idProducto;
     private String nombre;
     private String categoria;

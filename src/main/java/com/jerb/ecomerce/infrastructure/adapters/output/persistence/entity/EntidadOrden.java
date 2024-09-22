@@ -1,6 +1,6 @@
 package com.jerb.ecomerce.infrastructure.adapters.output.persistence.entity;
 
-
+import com.jerb.ecomerce.domain.Cliente;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,17 +12,16 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "Usuarios")
-public class EntidadUsuario {
+@Table(name = "Ordenes")
+public class EntidadOrden {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String idAdministrador;
-    @Column(name = "id_cliente",unique = true)
-    private String idCliente;
-    private String correo;
-    private String clave;
-    private String nombre;
-    private String direccion;
-    private String telefono;
+    @ManyToOne
+    @JoinColumn(name = "id_cliente",referencedColumnName = "id_cliente")
+    private EntidadUsuario cliente;
+    @Column(name = "id_orden",unique = true)
+    private String idOrden;
+    private Double valorOrden;
+
 }
